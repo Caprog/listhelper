@@ -2,19 +2,12 @@ import java.util.List;
 
 public class ListHelper {
     public boolean exist(int number, int[] numberList) {
-        for (int i : numberList) {
-            if (i == (number)) {
-                return true;
-            }
-        }
-        return false;
+        List<Integer> integerList = Arrays.asList(numberList);
+        return integerList.contains(number);
     }
 
     public boolean exist(int number, List<Integer> numberList) {
-        if (numberList.contains(number)) {
-            return true;
-        }
-        return false;
+        return numberList.contains(number)
     }
 
     public static void main(String[] args) {
